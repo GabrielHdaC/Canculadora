@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <main>
+            <section>
+                <article>
+                    <div id="content">
+                        <div id="content-app">
+                            <input type="text" id="field1" readonly value="0" />
+                            
+                            <div class="button-row">
+                                <button onclick="writeNumber(this)" id="n1">1</button>
+                                <button onclick="writeNumber(this)" id="n2">2</button>
+                                <button onclick="writeNumber(this)" id="n3">3</button>
+                                <button onclick="cleartxt()" id="C" class="wide-button">C</button>
+                            </div>
+                            <div class="button-row">
+                                <button onclick="writeNumber(this)" id="n4">4</button>
+                                <button onclick="writeNumber(this)" id="n5">5</button>
+                                <button onclick="writeNumber(this)" id="n6">6</button>
+                                <button onclick="setOperator(this)" id="multi">*</button>
+                                <button onclick="setOperator(this)" id="sum">+</button>
+                            </div>
+                            <div class="button-row">
+                                <button onclick="writeNumber(this)" id="n7">7</button>
+                                <button onclick="writeNumber(this)" id="n8">8</button>
+                                <button onclick="writeNumber(this)" id="n9">9</button>
+                                <button onclick="setOperator(this)" id="divide">/</button>
+                                <button onclick="setOperator(this)" id="sustract">-</button>
+                            </div>
+                            <div class="button-row">
+                                <button onclick="writeNumber(this)" id="n0" class="wide-button">0</button>
+                                <button onclick="writeNumber(this)" id="open">(</button>
+                                <button onclick="writeNumber(this)" id="close">)</button>
+                            </div>
+                            <div class="button-row">
+                                <h3 onclick="showEasterEgg()">ENVOLTI</h3>
+                                <button onclick="calculate()" id="calcular" class="wide-button">=</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <button onclick="showHistory()" id="history">Histórico</button>
+        <div id="history-container" class="hidden">
+            <h3>Histórico</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
